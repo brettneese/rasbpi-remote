@@ -1,0 +1,10 @@
+{# all_links.html #}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<ul>
+{% for url, endpoint in links %}
+<li><a href="{{ url }}">{{ endpoint }}</a></li>
+{% endfor %}
+</ul>

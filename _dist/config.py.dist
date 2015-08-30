@@ -1,0 +1,3 @@
+decryption_key='passphrase:networkname'
+encryption_type='wpa-pwd'
+wireless_card='wlan0'
