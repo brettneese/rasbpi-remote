@@ -4,7 +4,7 @@
 #
 
 ### BEGIN INIT INFO
-# Provides:          remote-listener
+# Provides:          dash-listener
 # Required-Start:    $all
 # Required-Stop:     $all
 # Default-Start:     2 3 4 5
@@ -15,7 +15,7 @@
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 NAME=remote-listener
-DAEMON=/home/pi/Desktop/airplay-monitor/listener.py
+DAEMON=/home/pi/Desktop/remote/dash-listener/listener.py
 DAEMONARGS=""
 PIDFILE=/var/run/remote-listener/$NAME.pid
 LOGFILE=/var/log/remote-listener/$NAME.log
