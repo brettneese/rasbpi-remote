@@ -35,13 +35,34 @@ def tv_toggle():
     return "toggling tv"
 
 
-@app.route("/radio/toggle")
+@app.route("/tuner/toggle")
 def radio_toggle():
     value = request.args.get('value')
-    playback.toggle_radio(value)
+    playback.toggle_tuner(value)
 
     return "toggling radio. also you can use ?value=whatever here"
 
+
+@app.route("/airplay/switch")
+def airplay_switch():
+    playback.airplay_switch()
+
+    return "switch to airplay"
+
+
+@app.route("/tv/switch")
+def tv_switch():
+    playback.tv_switch()
+
+    return "switch to tv"
+
+
+@app.route("/tuner/switch")
+def radio_switch():
+    value = request.args.get('value')
+    playback.tuner_switch(value)
+
+    return "switching to radio. also you can use ?value=whatever here"
 
 @app.route("/receiver/mute")
 def receiver_mute():
