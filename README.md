@@ -18,7 +18,9 @@ Thereotically there could be more interfaces and more listeners that triger acti
 
 # Installation Instructions
 sudo pip install 
+
 move config.py from /dist/ to airplay-listener 
+
 move init scripts to init.d (or however you prefer to run things on startup)
 
 # N.B. 
