@@ -1,4 +1,4 @@
-# airplay-monitor 
+# rasbpi-remote 
 
 Scripts for monitoring the status of an AirPlay receiver.
 
@@ -6,13 +6,24 @@ Used primarily on a Raspberry Pi to control an IR transmitter that automatically
 
 # Requirements
 
-- Python 2
+- Python 2.7
 - WireShark
 - The forked version of PyShark in the repo (haven't had a chance to post fixes back to PyShark)
 
+# Design Philosophy
+
+airplay-listener, dash-listener, and remote-web are seperate modules even though they share a repo, and should be thought of as interfaces around the core module, lirc-playback, which is fundamentally an SDK/API around the appopriate LIRC commands being run on the shell. 
+
+Thereotically there could be more interfaces and more listeners that triger actions but it's better to build them seperately vs cramming everything into one giant module. 
+
+# Installation Instructions
+sudo pip install 
+move config.py from /dist/ to airplay-listener 
+move init scripts to init.d (or however you prefer to run things on startup)
+
 # N.B. 
 
-I know this is horribly built. Working on removing the dependencies on sudoing all over everywhere and on using os.system. Currently needs to be run as sudo, so tread lightly. 
+I know this is horribly built. Working on removing the dependencies on sudoing all over everywhere and on using os.system. Some parts currently need to be run as sudo, so tread lightly. 
 
 Good documentation on the AirPlay protocol can be found: 
 
