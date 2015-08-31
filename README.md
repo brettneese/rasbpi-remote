@@ -1,8 +1,8 @@
 # rasbpi-remote 
 
-Scripts for monitoring the status of an AirPlay receiver.
+Scripts for controlling a home theate system using contextual (network) actions.
 
-Used primarily on a Raspberry Pi to control an IR transmitter that automatically powers an home theatre receiver on and off, may add more stuff later. Video demo: https://www.youtube.com/watch?v=Xe2hQXnwOaE
+Used primarily on a Raspberry Pi to control an IR transmitter that automatically powers an home theatre receiver on and off based on AirPlay traffic, may add more stuff later. Video demo: https://www.youtube.com/watch?v=Xe2hQXnwOaE
 
 # Requirements
 
