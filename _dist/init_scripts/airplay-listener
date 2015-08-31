@@ -17,8 +17,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 NAME=airplay-listener
 DAEMON=/home/pi/Desktop/remote/airplay-listener/listener.py
 DAEMONARGS=""
-PIDFILE=/var/run/remote-listener/$NAME.pid
-LOGFILE=/var/log/remote-listener/$NAME.log
+PIDFILE=/var/run/remote/$NAME.pid
+LOGFILE=/var/log/remote/$NAME.log
 
 . /lib/lsb/init-functions
 

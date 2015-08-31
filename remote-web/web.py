@@ -35,6 +35,21 @@ def tv_toggle():
     return "toggling tv"
 
 
+@app.route("/radio/toggle")
+def radio_toggle():
+    value = request.args.get('value')
+    playback.toggle_radio(value)
+
+    return "toggling radio. also you can use ?value=whatever here"
+
+
+@app.route("/receiver/mute")
+def receiver_mute():
+    playback.receiver_togglemute()
+
+    return "mute toggled"
+
+
 @app.route("/receiver/set_volume")
 def receiver_setvolume():
     value = request.args.get('value')

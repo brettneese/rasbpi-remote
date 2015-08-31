@@ -4,14 +4,17 @@ import lircplayback as playback
 import signal
 
 def button_pressed():
-    playback.airplay_toggle()
-
+    print "button pressed"
+    playback.radio_toggle(50)
 
 def arp_display(pkt):
-    if pkt[ARP].op == 1: #who-has (request)
-        if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
-            if pkt[ARP].hwsrc == '74:c2:46:a8:db:b6': # Gatorade button
-                button_pressed()
+    try:
+        if pkt[ARP].op == 1: #who-has (request)
+            if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
+                if pkt[ARP].hwsrc == '74:c2:46:a8:db:b6': # Gatorade button
+                    button_pressed()
+    except IndexError:
+        pass
 
 sniff(prn=arp_display, filter="arp", store=0)
 

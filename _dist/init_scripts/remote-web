@@ -15,10 +15,10 @@
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 NAME=remote-web
-DAEMON=/home/pi/Desktop/airplay-monitor/web.py
+DAEMON=/home/pi/Desktop/remote/remote-web/web.py
 DAEMONARGS=""
-PIDFILE=/var/run/remote-web/$NAME.pid
-LOGFILE=/var/log/remote-web/$NAME.log
+PIDFILE=/var/run/remote/$NAME.pid
+LOGFILE=/var/log/remote/$NAME.log
 
 . /lib/lsb/init-functions
 

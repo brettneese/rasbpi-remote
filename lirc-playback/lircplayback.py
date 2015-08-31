@@ -20,7 +20,18 @@ def airplay_toggle():
 	return True
 
 
+def tuner_toggle(volume=None):
+
+	os.system('irsend SEND_ONCE pioneer KEY_TV')
+	os.system('irsend SEND_ONCE pioneer KEY_POWER')
+	if volume is not None:
+		receiver_setvolume(int(volume))
+	os.system('irsend SEND_ONCE pioneer KEY_TUNER')
+	return True
+
+
 def tv_toggle():
+
 	os.system('irsend SEND_ONCE pioneer KEY_TV')
 	os.system('irsend SEND_ONCE pioneer KEY_POWER')
 	os.system('irsend SEND_ONCE pioneer KEY_TV')
@@ -31,6 +42,12 @@ def tv_toggle():
 def receiver_volumeup(times=1):
 	for _ in range(int(times)):
 		os.system('irsend SEND_ONCE pioneer KEY_VOLUMEUP')
+
+	return True
+
+
+def receiver_togglemute():
+	os.system('irsend SEND_ONCE pioneer KEY_MUTE')
 
 	return True
 
